@@ -4,8 +4,8 @@ import boto3
 from dotenv import load_dotenv 
 
 load_dotenv()
-def main():
-    prompt_Content = str(input("Enter your Prompt:"))
+def main(prompt):
+    prompt_Content = prompt
     client = boto3.client("bedrock-runtime", region_name="us-east-1")
     messages = [
         {
